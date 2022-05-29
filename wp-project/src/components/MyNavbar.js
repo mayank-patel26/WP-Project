@@ -50,8 +50,10 @@ export default function MyNavbar() {
               <Nav.Link as={Link} to={"/newsletter"} className="px-5">
                 NEWSLETTER
               </Nav.Link>
-              
-            </Nav>
+              <Nav.Link as={Link} to={"/about"} className="px-5">
+                ABOUT US
+              </Nav.Link>
+            </Nav>            
           </Navbar.Collapse>
         </Container>
       </Navbar>

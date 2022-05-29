@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Profile from './components/Profile'
 import Cart from './components/Cart';
 import NewsLetter from './components/NewsLetter'
+import About from './components/About';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/newsletter' element={<NewsLetter/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes> 
     </div>
     </BrowserRouter>
