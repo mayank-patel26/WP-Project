@@ -2,7 +2,16 @@ import React from "react";
 import { Tab, Nav, Col, Container, Row ,Card,Button} from "react-bootstrap";
 import watch from '../imgs/watch.jpg'
 const b = ["Boat", "JBL", "Skull Candy", "Leaf", "Noise"];
-const productList = [];
+const productList = [
+  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
+  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
+];
 
 
 export default function Product() {
@@ -18,8 +27,8 @@ export default function Product() {
 
 const Options = () => {
   return (
-    <Col md={3} className="bg-light sticky py-3" style={{ height: "100vh" }}>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="priceRange">
+    <Col scroll="no" md={3} className="bg-light sticky py-3" style={{height: '100vh',position : 'fixed', z_index:100}}>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="priceRange" >
         <Row>
           <Col md={4}>
             <Nav variant="pills" className="flex-column c">
@@ -57,7 +66,7 @@ const Options = () => {
 };
 
 const PriceOpt = () => (
-  <div className="d-flex flex-column justify-content-start">
+  <div className="d-flex flex-column justify-content-start ">
     <label htmlFor="start">Start</label>
     <input id="start" type="number" className="outline-primary m-1 p-1" />
     <br />
@@ -137,22 +146,31 @@ const RatingOptions = () => {
 
 const ProductListView = (props) => {
   return (
-    <Col sm={1} md={5} className="flex-grow-1">
+    <Col sm={1} md={5} className="flex-grow-1" style={{marginInlineStart :"25%"}}>
       <Row xs={1} sm={2} md={2} lg={3}>
-        <Col >
+
+{
+      props.products.map((item,key)=>(
+        <Col key={key}>
           <Card style={{ width: '18rem' ,height:'25rem',cursor :'pointer'}} className='m-2'>
-            <Card.Img variant="top" height={250}  width={250} src={watch} />
+            <Card.Img variant="top" height={250}  width={250} src={item.icon} />
             <Card.Body>
-              <Card.Title>Watch Name</Card.Title>
-              <Card.Subtitle>Rs 4000</Card.Subtitle>
+              <Card.Title>{item.name}</Card.Title>
+              <Card.Subtitle>Rs {item.price}</Card.Subtitle>
               <Card.Text
               className="text-truncate"
               >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minus itaque laudantium ex reiciendis, assumenda enim molestias iure adipisci dolor mollitia architecto doloremque odit vero ipsa accusamus reprehenderit optio tempore, quas neque ipsam? Ducimus hic provident, veritatis nesciunt minima dolore amet ipsa pariatur illo iusto eveniet fuga ullam tenetur repudiandae consequatur quos inventore accusantium quae consequuntur, incidunt error assumenda reprehenderit. Aliquam et sint ab voluptatem, ut consequatur facere illum sunt voluptates nemo placeat magni repellat ipsum velit cupiditate eveniet distinctio, omnis a accusantium nam laborum! Aliquid vel distinctio facere, dignissimos dolorem accusamus minima at ea inventore, quas officia quia nesciunt!
+              {item.description}
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
+      ))
+}
+
+
+
+        
      
       
       </Row>
