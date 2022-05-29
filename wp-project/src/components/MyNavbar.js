@@ -7,7 +7,8 @@ import {
   Form,
   FormControl,
   Button,
-} from "react-bootstrap";
+} 
+from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -30,9 +31,6 @@ export default function MyNavbar() {
               <Nav.Link as={Link} to={"/cart"} className="px-5">
                 CART
               </Nav.Link>
-              <Nav.Link as={Link} to={"/newsletter"} className="px-5">
-                NEWSLETTER
-              </Nav.Link>
               <NavDropdown
                 title="CATEGORIES"
                 id="basic-nav-dropdown"
@@ -50,8 +48,13 @@ export default function MyNavbar() {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              
-            </Nav>
+              <Nav.Link as={Link} to={"/newsletter"} className="px-5">
+                NEWSLETTER
+              </Nav.Link>
+              <Nav.Link as={Link} to={"/about"} className="px-5">
+                ABOUT US
+              </Nav.Link>
+            </Nav>            
           </Navbar.Collapse>
         </Container>
       </Navbar>
