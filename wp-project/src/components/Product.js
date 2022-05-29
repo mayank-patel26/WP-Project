@@ -27,7 +27,7 @@ export default function Product() {
 
 const Options = () => {
   return (
-    <Col scroll="no" md={3} className="bg-light sticky py-3" style={{height: '100vh',position : 'fixed', z_index:100}}>
+    <Col scroll="no" md={3} className="bg-light sticky py-3" style={{height: '100vh'}}>
       <Tab.Container id="left-tabs-example" defaultActiveKey="priceRange" >
         <Row>
           <Col md={4}>
@@ -146,7 +146,7 @@ const RatingOptions = () => {
 
 const ProductListView = (props) => {
   return (
-    <Col sm={1} md={5} className="flex-grow-1" style={{marginInlineStart :"25%"}}>
+    <Col sm={1} md={5} className="flex-grow-1" >
       <Row xs={1} sm={2} md={2} lg={3}>
 
 {
