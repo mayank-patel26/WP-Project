@@ -30,6 +30,9 @@ export default function MyNavbar() {
               <Nav.Link as={Link} to={"/cart"} className="px-5">
                 CART
               </Nav.Link>
+              <Nav.Link as={Link} to={"/newsletter"} className="px-5">
+                NEWSLETTER
+              </Nav.Link>
               <NavDropdown
                 title="CATEGORIES"
                 id="basic-nav-dropdown"
