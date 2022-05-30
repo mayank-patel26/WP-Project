@@ -3,14 +3,14 @@ import { Tab, Nav, Col, Container, Row ,Card,Button} from "react-bootstrap";
 import watch from '../imgs/watch.jpg'
 const b = ["Boat", "JBL", "Skull Candy", "Leaf", "Noise"];
 const productList = [
-  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : watch,price :'500',description :"this is an amazing watch"},
-  {name :"Watch",icon : 'https://www.dailyexcelsior.com/wp-content/uploads/2019/04/chatsrat-1.jpg' ,price :'500',description :"this is an amazing watch"},
+  {name :"Classic watch",icon : watch, price :'120$',description :"Blue dial watch"},
+  {name :"Red TWS Earphones",icon : 'https://cdn.shopify.com/s/files/1/0057/8938/4802/files/4_bec6aa25-0ec4-487f-859e-5c9da524770a.jpg?v=1653470044' ,price :'100$',description :"Red TWS Earphones with loud bass"},
+  {name :"Joggers",icon : 'https://www.verywellmind.com/thmb/eig-KS_Og83KnFaE8AQO-1FamN0=/fit-in/992x1352/filters:no_upscale():max_bytes(150000):strip_icc()/ScreenShot2021-10-19at3.24.03PM-a67c3a1004f94b649d7893c399c7394a.png', price :'20$',description :"Cotton joggers"},
+  {name :"Pink beanie",icon : 'https://eshop11.herokuapp.com/assets/img/hero/hero_man.png' ,price :'50$',description :"Pink beanie for winters"},
+  {name :"Makeup Kit",icon : 'https://assets-global.website-files.com/5ad4b5ac3265e94b4f4625ea/61dd64df1ee510cd7bc62e37_amy-shamblen-xwM61TPMlYk-unsplash1_674531c2e05e68084453311b2c988150_2000.jpeg', price :'15$',description :"Lightweight makeup kit"},
+  {name :"Red sandals",icon : 'https://cdn-afllh.nitrocdn.com/PwKttzWmqrxeptmNTeKNfywizeaFnrcW/assets/static/optimized/rev-1aacf3c/app/uploads/2020/08/Shoes-concept.jpg' ,price :'150$',description :"High heeled sandals for women"},
+  {name :"Diamond bangles",icon : 'https://images.squarespace-cdn.com/content/v1/5725225ac2ea51b309f30d81/1552593550622-R01AT0KUXZ65BT37IM0A/IMG_1165.jpg?format=1000w',price :'125$',description :"Bangles to suit your needs for the festive season"},
+  {name :"Bluetooth earphones",icon : 'https://rukminim1.flixcart.com/image/416/416/k6l2vm80/headphone/v/v/z/yora-bluetooth-headset-with-mic-and-volume-button-earphone-original-imaf7p2fqnaspqnt.jpeg?q=70' ,price :'50$',description :"red bluetooth earphones"},
 ];
 
 

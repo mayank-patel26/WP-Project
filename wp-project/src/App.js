@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import MyNavbar from './components/MyNavbar';
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -11,6 +10,7 @@ import NewsLetter from './components/NewsLetter'
 import About from './components/About';
 
 function App() {
+  const user = true;
   return (
     <BrowserRouter>
     <MyNavbar/>
