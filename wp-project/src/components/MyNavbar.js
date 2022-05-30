@@ -36,16 +36,19 @@ export default function MyNavbar() {
                 id="basic-nav-dropdown"
                 className='m-1'
               >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">FASHION</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  Another action
+                  COSMETICS
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
-                  Something
+                  ELECTRONICS
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                {/* <NavDropdown.Divider /> */}
                 <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                  APPLIANCES
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.5">
+                  BOOKS AND TOYS
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} to={"/newsletter"} className='m-1'>
