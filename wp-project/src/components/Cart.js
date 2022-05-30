@@ -4,9 +4,15 @@ import { Button, Card, Container, Row, Col } from "react-bootstrap";
 export default function Cart() {
   return (
     <Container fluid>
-      <h2 className="display-4 fw-bold py-1">Cart</h2>
-      <Row xs={1} sm={2} md={3}>
-        <Col xs={1} sm={3} md={2} lg={3} className=" flex-grow-1">
+      <div style={{marginTop: "40px", marginBottom: "40px"}}></div>
+      <h2 className="display-4 fw-bold py-1 my-5">Cart</h2>
+      <Row
+        xs={1}
+        sm={2}
+        md={3}
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        <Col xs={1} sm={3} md={2} lg={3}>
           <Card
             style={{
               width: "18rem",
@@ -31,7 +37,7 @@ export default function Cart() {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col xs={1} sm={3} md={2} lg={3}>
           <Card
             style={{
               width: "18rem",
@@ -56,7 +62,7 @@ export default function Cart() {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col xs={1} sm={3} md={2} lg={3}>
           <Card
             style={{
               width: "18rem",
@@ -81,20 +87,33 @@ export default function Cart() {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Card style={{ width:"94rem",height:"25rem"}}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              {/* <Card.Title>Card Title</Card.Title> */}
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-        </Col>
       </Row>
+
+      <Row xs={1}
+        sm={2}
+        md={3}
+        style={{ display: "flex", justifyContent: "center" }}>
+        
+          <Col>
+            <Card
+              style={{ width: "15rem", height: "20rem", border: "0" }}
+              className="my-5"
+            >
+              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+              <Card.Body>
+                {/* <Card.Title>Card Title</Card.Title> */}
+                
+                <Card.Text className="text-start">
+                  <h1 style={{width: "500px"}}>Order Summary</h1><br/><br/><br/>
+                  <p>Subtotal</p>
+                  <p>Discount</p>
+                  <p>Total</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+      </Row>
+      
     </Container>
   );
 }
