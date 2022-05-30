@@ -167,12 +167,6 @@ const ProductListView = (props) => {
         </Col>
       ))
 }
-
-
-
-        
-     
-      
       </Row>
     </Col>
   );
