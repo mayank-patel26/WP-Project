@@ -20,7 +20,7 @@ export default function Cart() {
               variant="top"
               height={250}
               width={350}
-              src="http://brandingbypixels.com/wp-content/uploads/2017/11/1.-Branding-by-Pixels.png"
+              src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/4_bec6aa25-0ec4-487f-859e-5c9da524770a.jpg?v=1653470044"
             />
             <Card.Body>
               <Card.Title>CLOTHING</Card.Title>
