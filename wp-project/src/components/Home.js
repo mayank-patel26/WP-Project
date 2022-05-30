@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
-export default function Home() {
+export default function Home(){
   productAll();
   return (
     <div>

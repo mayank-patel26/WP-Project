@@ -34,32 +34,13 @@ export default function MyNavbar() {
               <Nav.Link as={Link} to={"/cart"} className='m-1'>
                 CART
               </Nav.Link>
-              <NavDropdown
-                title="CATEGORIES"
-                id="basic-nav-dropdown"
-                className='m-1'
-              >
-                <NavDropdown.Item href="#action/3.1">FASHION</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  COSMETICS
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  ELECTRONICS
-                </NavDropdown.Item>
-                {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item href="#action/3.4">
-                  APPLIANCES
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">
-                  BOOKS AND TOYS
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link as={Link} to={"/newsletter"} className='m-1'>
+              
+              {/* <Nav.Link as={Link} to={"/newsletter"} className='m-1'>
                 NEWSLETTER
-              </Nav.Link >
-              <Nav.Link as={Link} to={"/about"} className='m-1'>
+              </Nav.Link > */}
+              {/* <Nav.Link as={Link} to={"/about"} className='m-1'>
                 ABOUT US
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>            
           </Navbar.Collapse>
         </Container>
