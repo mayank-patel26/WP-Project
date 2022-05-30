@@ -1,8 +1,9 @@
+import axios from "axios";
 import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Home(){
-  productAll();
+  // productAll();
   return (
     <div>
       <Carousel>
@@ -344,10 +345,4 @@ export default function Home(){
   );
 }
 
-const productAll = async ()=>{
-  let url = '/api/products?category=tshirt'
-  let data = await fetch(url);
-  let jsonData = await data.text();
-  console.log(jsonData);
 
-}

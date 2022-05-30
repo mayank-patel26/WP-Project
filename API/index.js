@@ -7,18 +7,23 @@ const authRoute = require("./routes/auth");
 const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
-
+const cors=require("cors");
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL).then(()=>console.log("DB Connection Successfull!")).catch((err)=>{console.log(err)})
 
 app.use(express.json());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts",cartRoute);
 app.use("/api/orders", orderRoute);
-
+// app.use(cors());
 app.listen(process.env.PORT || 5000, () => {
     console.log("Backend server is running");
 });

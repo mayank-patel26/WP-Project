@@ -6,8 +6,9 @@ import Product from './components/Product';
 import Login from './components/Login';
 import Profile from './components/Profile'
 import Cart from './components/Cart';
-import NewsLetter from './components/NewsLetter'
+import NewsLetter from './components/NewsLetter';
 import About from './components/About';
+import ProductItem from './components/ProductItem';
 
 function App() {
   const user = true;
@@ -24,6 +25,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/newsletter' element={<NewsLetter/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/productItem' element={<ProductItem/>}/>
       </Routes> 
     </div>
     </BrowserRouter>
