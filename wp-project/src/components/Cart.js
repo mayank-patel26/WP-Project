@@ -4,7 +4,7 @@ import { Button, Card, Container, Row, Col } from "react-bootstrap";
 export default function Cart() {
   return (
     <Container fluid>
-      <div style={{marginTop: "40px", marginBottom: "40px"}}></div>
+      <div style={{ marginTop: "40px", marginBottom: "40px" }}></div>
       <h2 className="display-4 fw-bold py-1 my-5">Cart</h2>
       <Row
         xs={1}
@@ -89,31 +89,34 @@ export default function Cart() {
         </Col>
       </Row>
 
-      <Row xs={1}
+      <Row
+        xs={1}
         sm={2}
         md={3}
-        style={{ display: "flex", justifyContent: "center" }}>
-        
-          <Col>
-            <Card
-              style={{ width: "15rem", height: "20rem", border: "0" }}
-              className="my-5"
-            >
-              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-              <Card.Body>
-                {/* <Card.Title>Card Title</Card.Title> */}
-                
-                <Card.Text className="text-start">
-                  <h1 style={{width: "500px"}}>Order Summary</h1><br/><br/><br/>
-                  <p>Subtotal</p>
-                  <p>Discount</p>
-                  <p>Total</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        <Col>
+          <Card
+            style={{ width: "15rem", height: "20rem", border: "0" }}
+            className="my-5"
+          >
+            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+            <Card.Body>
+              {/* <Card.Title>Card Title</Card.Title> */}
+
+              <Card.Text className="text-start">
+                <h1 style={{ width: "500px" }}>Order Summary</h1>
+                <br />
+                <br />
+                <br />
+                <p>Subtotal</p>
+                <p>Discount</p>
+                <p>Total</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
-      
     </Container>
   );
 }
