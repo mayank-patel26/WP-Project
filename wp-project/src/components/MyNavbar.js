@@ -1,4 +1,5 @@
 import React from "react";
+import { VscAccount } from "react-icons/vsc";
 import {
   Navbar,
   Container,
@@ -17,7 +18,9 @@ export default function MyNavbar() {
     <div >
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+        <VscAccount className="m-2 mx-4"/>
+            Shopilify</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
