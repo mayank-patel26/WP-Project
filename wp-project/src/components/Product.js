@@ -152,7 +152,7 @@ const ProductListView = (props) => {
 {
       props.products.map((item,key)=>(
         <Col key={key}>
-          <Card style={{ width: '18rem' ,height:'25rem',cursor :'pointer'}} className='m-2'>
+          <Card style={{ width: '22rem' ,height:'25rem',cursor :'pointer'}} className='m-2'>
             <Card.Img variant="top" height={250}  width={250} src={item.icon} />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>

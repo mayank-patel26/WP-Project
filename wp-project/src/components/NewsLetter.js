@@ -14,20 +14,23 @@ export default function NewsLetter() {
                 <Form.Control
                   type="name"
                   placeholder="Enter your full name"
+                  // className="px-5"
+                  style={{width: "30rem", textAlign: "center"}}
                 />
               </Form.Group>
-              <Form.Group className="mb-5" controlId="formBasicAge">
+              {/* <Form.Group className="mb-5" controlId="formBasicAge">
                 <Form.Label className="text-start fw-bold">Age:</Form.Label>
                 <Form.Control
                   type="age"
                   placeholder="Enter your age"
                 />
-              </Form.Group>
+              </Form.Group> */}
               <Form.Group className="mb-5" controlId="formBasicEmail">
                 <Form.Label className="text-start fw-bold">Email address:</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email address"
+                  style={{width: "30rem", textAlign: "center"}}
                 />
               </Form.Group>
               <Form.Group className="mb-5" controlId="formBasicContact">
@@ -35,6 +38,7 @@ export default function NewsLetter() {
                 <Form.Control
                   type="phone"
                   placeholder="Enter your phone number"
+                  style={{width: "30rem", textAlign: "center"}}
                 />
               </Form.Group>
               <Button variant="primary" type="submit" className="mb-3">

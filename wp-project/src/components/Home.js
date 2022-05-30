@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Home() {
+  productAll();
   return (
     <div>
       <Carousel>
@@ -66,14 +67,15 @@ export default function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      
       <Container fluid className="mt-4">
-        <h2 className="display-2 fw-bold">
+        <h2 className="display-4 fw-bold py-4">
           Up to 60% off on Deals of Fashion!
         </h2>
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={1} md={2} lg={3} className=" flex-grow-1">
             <Card
-              style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
+              style={{ width: "18rem", height: "20rem", cursor: "pointer"}}
               className="m-2"
             >
               <Card.Img
@@ -142,19 +144,20 @@ export default function Home() {
         </Row>
       </Container>
       <Container fluid className="mt-4">
-        <h2 className="display-2 fw-bold">
+        <h2 className="display-4 fw-bold py-5">
           Shop Trending Headphones & speakers
         </h2>
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={2} md={2} lg={3} className="flex-grow-1">
             <Card
-              style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
+              style={{ width: "18rem", height: "20rem", cursor: "pointer"}}
               className="m-2"
             >
               <Card.Img
+                style = {{marginTop: "20px"}}
                 variant="top"
-                height={200}
-                width={200}
+                height={180}
+                width={180}
                 src="https://rukminim1.flixcart.com/image/416/416/k6l2vm80/headphone/v/v/z/yora-bluetooth-headset-with-mic-and-volume-button-earphone-original-imaf7p2fqnaspqnt.jpeg?q=70"
               />
               <Card.Body>
@@ -175,7 +178,7 @@ export default function Home() {
                 src="https://cdn.moglix.com/p/qj9NJjJZKbuU9.jpg"
               />
               <Card.Body>
-                <Card.Title>TRULY WIRELESS EARPHONES</Card.Title>
+                <Card.Title>TWS</Card.Title>
                 <Button variant="primary">SHOP NOW</Button>
               </Card.Body>
             </Card>
@@ -217,7 +220,7 @@ export default function Home() {
         </Row>
       </Container>
       <Container fluid className="mt-4">
-        <h2 className="display-2 fw-bold">For Your Baby Needs</h2>
+        <h2 className="display-4 fw-bold py-5">For Your Baby Needs</h2>
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={2} md={2} lg={3} className="flex-grow-1">
             <Card
@@ -295,18 +298,18 @@ export default function Home() {
         variant="dark"
       >
         <Row>
-          <p className="text-center">GET CONNECTED WITH US ON SOCIAL MEDIA</p>
-          <div className="text-center">
-            <a href="">
+          {/* <p className="text-center">GET CONNECTED WITH US ON SOCIAL MEDIA</p> */}
+          <div className="text-center" style={{margin: "20px"}}>
+            <a href="" style={{margin: "10px"}}>
               <FaFacebook />
             </a>
-            <a href="">
+            <a href="" style={{margin: "10px"}}>
               <FaTwitter />
             </a>
-            <a href="">
+            <a href="" style={{margin: "10px"}}>
               <FaLinkedin />
             </a>
-            <a href="">
+            <a href="" style={{margin: "10px"}}>
               <FaYoutube />
             </a>
           </div>
@@ -339,4 +342,12 @@ export default function Home() {
       </Container>
     </div>
   );
+}
+
+const productAll = async ()=>{
+  let url = '/api/products?category=tshirt'
+  let data = await fetch(url);
+  let jsonData = await data.text();
+  console.log(jsonData);
+
 }

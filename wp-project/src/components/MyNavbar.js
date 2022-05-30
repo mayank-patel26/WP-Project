@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 export default function MyNavbar() {
   return (
     <div >
-      <Navbar bg="dark" expand="lg" variant="dark">
+      <Navbar bg="dark" expand="lg" variant="dark" className = "fixed-top">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
         <VscAccount className="m-2 mx-4"/>

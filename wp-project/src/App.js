@@ -14,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <MyNavbar/>
+    <div style={{marginTop: "60px", marginBottom: "10px"}}></div>
     <div className="App">
       <Routes>
         <Route  path='/' element={<Login/>}/>
