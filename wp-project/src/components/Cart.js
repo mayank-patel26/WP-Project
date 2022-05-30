@@ -5,10 +5,15 @@ export default function Cart() {
   return (
     <Container fluid>
       <h2 className="display-4 fw-bold py-1">Cart</h2>
-      <Row xs={1} sm={2} md={4}>
+      <Row xs={1} sm={2} md={3}>
         <Col xs={1} sm={3} md={2} lg={3} className=" flex-grow-1">
           <Card
-            style={{ width: "50rem", height: "22rem", cursor: "pointer", border:"0"}}
+            style={{
+              width: "18rem",
+              height: "22rem",
+              cursor: "pointer",
+              border: "0",
+            }}
             className="m-2"
           >
             <Card.Img
@@ -25,8 +30,15 @@ export default function Cart() {
               <Button variant="dark">-</Button>
             </Card.Body>
           </Card>
+        </Col>
+        <Col>
           <Card
-            style={{ width: "50rem", height: "22rem", cursor: "pointer" , border:"0"}}
+            style={{
+              width: "18rem",
+              height: "22rem",
+              cursor: "pointer",
+              border: "0",
+            }}
             className="m-2"
           >
             <Card.Img
@@ -43,8 +55,15 @@ export default function Cart() {
               <Button variant="dark">-</Button>
             </Card.Body>
           </Card>
+        </Col>
+        <Col>
           <Card
-            style={{ width: "50rem", height: "22rem", cursor: "pointer", border:"0" }}
+            style={{
+              width: "18rem",
+              height: "22rem",
+              cursor: "pointer",
+              border: "0",
+            }}
             className="m-2"
           >
             <Card.Img
@@ -62,16 +81,16 @@ export default function Cart() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={1} sm={3} md={2} lg={3}>
-          <Card style={{ width: "20rem",height:"70rem"}}>
+        <Col>
+          <Card style={{ width:"94rem",height:"25rem"}}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text>
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              
             </Card.Body>
           </Card>
         </Col>
