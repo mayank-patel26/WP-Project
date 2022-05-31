@@ -9,7 +9,7 @@ export default function Login() {
   
   return (
 
-    <Container fluid >
+    <Container fluid style={{marginTop: "175px"}}>
       <Row xs={1}  md={1} lg={2} fluid >
         <Col sm={6} md={6} lg={6}>
         {/* <SignUpComponent/> */}
@@ -53,7 +53,7 @@ const LoginComponent=(props)=>{
         border: '3px solid rgb(0, 0, 0)',}}>
 <h4>Login</h4>
 <div className='mt-4 m-2'>
-<label htmlFor="userId" className='mx-4 my-3'>User Name</label>
+<label htmlFor="userId" className='mx-4 my-3'>Username</label>
     <input id="userId" type="text" value={id} onChange={handleChangeID} className="rounded m-1 p-1" />
 </div>
 
@@ -76,7 +76,7 @@ const SignUpComponent=(props)=>(
           border: '3px solid rgb(0, 0, 0)',}}>
   <h4>Sign Up</h4>
   <div className='mt-4 m-2'>
-  <label htmlFor="userId" className='mx-4 my-3'>User Name</label>
+  <label htmlFor="userId" className='mx-4 my-3'>Username</label>
       <input id="userId" type="text" className="rounded m-1 p-1" />
   </div>
   

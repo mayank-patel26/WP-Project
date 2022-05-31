@@ -8,7 +8,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Home(){
   // productAll();
   return (
-    <div>
+    <Container fluid>
       <Carousel>
         <Carousel.Item>
           <img
@@ -311,24 +311,26 @@ export default function Home(){
         <Row>
           {/* <p className="text-center">GET CONNECTED WITH US ON SOCIAL MEDIA</p> */}
           <div className="text-center" style={{ margin: "20px" }}>
-            <a href="www.facebook.com" style={{ margin: "10px" }}>
+            <a href="http://www.facebook.com" style={{ margin: "10px" }}>
               <FaFacebook />
             </a>
-            <a href="www.twitter.com" style={{ margin: "10px" }}>
+            <a href="http://www.twitter.com" style={{ margin: "10px" }}>
               <FaTwitter />
             </a>
-            <a href="www.linkedin.com" style={{ margin: "10px" }}>
+            <a href="http://www.linkedin.com" style={{ margin: "10px" }}>
               <FaLinkedin />
             </a>
-            <a href="www.youtube.com" style={{ margin: "10px" }}>
+            <a href="http://www.youtube.com" style={{ margin: "10px" }}>
               <FaYoutube />
             </a>
           </div>
           <Col sm={4}>
             <h2>ABOUT US</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-              autem alias deleniti magnam quibusdam temporibus.
+              Created by: <br/>
+              Tanmai Kamat: 60003200071 <br/>
+              Yash Shah: 60003200048 <br/>
+              Mayank Patel: 60003200061 <br/>
             </p>
           </Col>
           <Col sm={4} variant="dark">
@@ -340,17 +342,17 @@ export default function Home(){
             <br />
             <a href="">CART</a>
             <br />
-            <a href="">NEWSLETTER</a>
+            {/* <a href="">NEWSLETTER</a> */}
             <br />
           </Col>
           <Col sm={4}>
             <h2>ADDRESS</h2>
-            <p>INDIA</p>
-            <p>MUMBAI</p>
-            <p>9892431516/9892147336</p>
+            <p>DJ Sanghvi College of Engineering</p>
+            <p>Vile Parle, Mumbai</p>
+            <p>1234567890</p>
           </Col>
         </Row>
       </Container>
-    </div>
+    </Container>
   );
 }
