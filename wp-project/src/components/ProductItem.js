@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'
-import { Container,Row,Image,Col } from 'react-bootstrap';
+import { Container,Row,Image,Col, Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import { getProduct } from '../api/serverApi';
 
@@ -16,6 +16,9 @@ export default function ProductItem() {
     
   getP(id,setItem);
   }, [])
+
+  
+
   
   return (
     <Container>
@@ -32,6 +35,11 @@ export default function ProductItem() {
         <h3>{Item.title}</h3>
         <h4>Rs .{Item.price}</h4>
         </Col>
+      </Row>
+      <Row >
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <Button className='btn-primary btn-md' style={{width: "200px"}}>Add to cart</Button>
+        </div>
       </Row>
     </Container>
   )

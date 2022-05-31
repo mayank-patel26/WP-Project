@@ -2,6 +2,8 @@ import axios from "axios";
 import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 export default function Home(){
   // productAll();
   return (
