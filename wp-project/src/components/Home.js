@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 
@@ -19,7 +19,7 @@ export default function Home(){
           />
           <Carousel.Caption>
             <h3 className="display-3 text-danger fw-bold">BOAT PRODUCTS</h3>
-            <Button variant="success" type="submit" className="mb-3">
+            <Button variant="success" type="submit" className="mb-3" as={Link} to="/products/">
               SHOP NOW
             </Button>
           </Carousel.Caption>
@@ -33,7 +33,7 @@ export default function Home(){
           />
           <Carousel.Caption>
             <h3 className="display-3 text-danger fw-bold">SUMMER COLLECTION</h3>
-            <Button variant="success" type="submit" className="mb-3">
+            <Button variant="success" type="submit" className="mb-3"  as={Link} to="/products/">
               SHOP NOW
             </Button>
           </Carousel.Caption>
@@ -48,7 +48,7 @@ export default function Home(){
 
           <Carousel.Caption>
             <h3 className="display-3 text-danger fw-bold">WINTER COLLECTION</h3>
-            <Button variant="success" type="submit" className="mb-3">
+            <Button variant="success" type="submit" className="mb-3"  as={Link} to="/products/">
               SHOP NOW
             </Button>
           </Carousel.Caption>
@@ -65,13 +65,13 @@ export default function Home(){
             <h3 className="display-3 text-danger fw-bold">
               LOUNGEWEAR COLLECTION
             </h3>
-            <Button variant="success" type="submit" className="mb-3">
+            <Button variant="success" type="submit" className="mb-3"  as={Link} to="/products/">
               SHOP NOW
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      
+
       <Container fluid className="mt-4">
         <h2 className="display-4 fw-bold py-4">
           Up to 60% off on Deals of Fashion!
@@ -79,8 +79,9 @@ export default function Home(){
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={1} md={2} lg={3} className=" flex-grow-1">
             <Card
-            as={Link} to="/products/tshirt"
-              style={{ width: "18rem", height: "20rem", cursor: "pointer"}}
+              as={Link}
+              to="/products/tshirt"
+              style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
               className="m-2"
             >
               <Card.Img
@@ -97,6 +98,8 @@ export default function Home(){
           </Col>
           <Col>
             <Card
+              as={Link}
+              to="/products/beauty"
               style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
               className="m-2"
             >
@@ -114,6 +117,7 @@ export default function Home(){
           </Col>
           <Col>
             <Card
+            as={Link} to="/products/footwear"
               style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
               className="m-2"
             >
@@ -131,6 +135,7 @@ export default function Home(){
           </Col>
           <Col>
             <Card
+            as={Link} to="/products/jewellery"
               style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
               className="m-2"
             >
@@ -155,11 +160,12 @@ export default function Home(){
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={2} md={2} lg={3} className="flex-grow-1">
             <Card
-              style={{ width: "18rem", height: "20rem", cursor: "pointer"}}
+            as={Link} to="/products/bluetooth"
+              style={{ width: "18rem", height: "20rem", cursor: "pointer" }}
               className="m-2"
             >
               <Card.Img
-                style = {{marginTop: "20px"}}
+                style={{ marginTop: "20px" }}
                 variant="top"
                 height={180}
                 width={180}
@@ -304,17 +310,17 @@ export default function Home(){
       >
         <Row>
           {/* <p className="text-center">GET CONNECTED WITH US ON SOCIAL MEDIA</p> */}
-          <div className="text-center" style={{margin: "20px"}}>
-            <a href="" style={{margin: "10px"}}>
+          <div className="text-center" style={{ margin: "20px" }}>
+            <a href="" style={{ margin: "10px" }}>
               <FaFacebook />
             </a>
-            <a href="" style={{margin: "10px"}}>
+            <a href="" style={{ margin: "10px" }}>
               <FaTwitter />
             </a>
-            <a href="" style={{margin: "10px"}}>
+            <a href="" style={{ margin: "10px" }}>
               <FaLinkedin />
             </a>
-            <a href="" style={{margin: "10px"}}>
+            <a href="" style={{ margin: "10px" }}>
               <FaYoutube />
             </a>
           </div>
@@ -348,5 +354,3 @@ export default function Home(){
     </div>
   );
 }
-
-

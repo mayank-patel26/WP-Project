@@ -1,9 +1,46 @@
-import React from "react";
-import { Button, Card, Container, Row, Col,Image } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Card, Container, Row, Col, Image } from "react-bootstrap";
+import Cart from "../api/cart";
+import axios from "axios";
+import { getAllProducts } from "../api/serverApi";
 
-export default function Cart() {
+const productAll = async (fun, ids) => {
+  let url = getAllProducts();
+  try {
+    let data = await axios.get(url);
+    let finalData = data["data"]["products"];
+    finalData = finalData.filter((i) => ids.includes(i._id));
+
+    fun(finalData);
+
+    // productList=data['data']['products'];
+    console.log(finalData);
+  } catch (e) {
+    console.log(e);
+  }
+  // let jsonData = await data.text();
+};
+export default function MyCart() {
+  let list = Cart.getIdList();
+  const [ItemList, setItemList] = useState([]);
+  let totalPrice =0;
+  for (var i = 0; i < ItemList.length; i++) {
+    totalPrice+=ItemList[i].price;
+    //Do something
+}
+  useEffect(() => {
+    productAll(setItemList, list);
+  }, []);
+  console.log(list);
   return (
-    <CartItem/>
+    <Container>
+      {ItemList.map((item, key) => (
+        <CartItem item={item} key={key} />
+      ))}
+
+      <h2 className="mt-5 text-center">Subtotal</h2>
+      <h4>Rs. {totalPrice}</h4>
+    </Container>
     // <Container fluid>
     //   <div style={{ marginTop: "40px", marginBottom: "40px" }}></div>
     //   <h2 className="display-4 fw-bold py-1 my-5">Cart</h2>
@@ -122,25 +159,25 @@ export default function Cart() {
   );
 }
 
-const CartItem=(Item)=>{
+const CartItem = (props) => {
+  let Item = props.item;
+  let totalPrice = 0;
+  let tempPrice = 0;
+
   return (
-    <Container>
-      <Row>
-        <Image
-        src={Item.img}
-        width={300}
-        height={300}
-        className='m-3'/>
-      </Row>
-      <Row >
-        <Col className='d-flex flex-column p-3'>
-          
-        <h3>Item title</h3>
-        <h4>Rs .Item price</h4>
-        </Col>
-      </Row>
-    </Container>
-  )
-
-
-}
+    <div>
+      <div style={{ width: "300px" }}>
+        <Row>
+          <Image src={Item.img} width={300} height={300} className="m-3" />
+        </Row>
+        <Row>
+          <Col className="d-flex flex-column p-3">
+            <h3>{Item.title}</h3>
+            <h4>Rs. {Item.price}</h4>
+           
+          </Col>
+        </Row>
+      </div>
+    </div>
+  );
+};

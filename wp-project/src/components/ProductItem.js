@@ -4,6 +4,7 @@ import { Container,Row,Image,Col, Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import { getProduct } from '../api/serverApi';
 
+import Cart from '../api/cart'
 const getP=async (id,func)=>{
 let item=await axios.get(getProduct(id));
 console.log(item['data']['products'].filter((i)=>(i._id===id))[0]);
@@ -17,8 +18,7 @@ export default function ProductItem() {
   getP(id,setItem);
   }, [])
 
-  
-
+  console.log(Cart.getIdList());
   
   return (
     <Container>
@@ -36,10 +36,9 @@ export default function ProductItem() {
         <h4>Rs .{Item.price}</h4>
         </Col>
       </Row>
-      <Row >
-        <div style={{display: "flex", justifyContent: "center"}}>
-          <Button className='btn-primary btn-md' style={{width: "200px"}}>Add to cart</Button>
-        </div>
+      <Row><Col style={{display :'flex',justifyContent:'center'}}>
+        <Button onClick={()=>{Cart.addId(Item._id)}} className='btn-md'>Add to cart</Button>
+      </Col>
       </Row>
     </Container>
   )
