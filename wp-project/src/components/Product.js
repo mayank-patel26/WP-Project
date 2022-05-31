@@ -38,13 +38,16 @@ const productAll = async (fun,fun2,cate)=>{
 
 }
 
-const applyFilters=(fun,selectedlis,finalList)=>{
+const applyFilters=(fun,selectedlis,finalList,start,end)=>{
   console.log(finalList.map((i)=>(i.brand)));
+  finalList=finalList.filter((i)=>(i.price>start));
+  
+  finalList=finalList.filter((i)=>(i.price<end));
   if(selectedlis.length===0){
     fun(finalList);
     return;
   }
-  fun(finalList.filter((i)=>(selectedlis.includes(i.title))));
+  fun(finalList.filter((i)=>(selectedlis.includes(i.brand))));
 }
 
 export default function Product(props) {
@@ -52,6 +55,8 @@ export default function Product(props) {
   const [productLis, setproductLis] = useState([]);
   const [fullproductList, setproductList] = useState([]);
   const [brandList, setbrandList] = useState([]);
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(100);
   useEffect(() => {
    
   productAll(setproductLis,setproductList,props.category);
@@ -70,12 +75,13 @@ export default function Product(props) {
   
     useEffect(() => {
       console.log(selectedbrandList);
-      applyFilters(setproductLis,selectedbrandList,fullproductList);
-      }, [selectedbrandList]);
+      applyFilters(setproductLis,selectedbrandList,fullproductList,start,end);
+      }, [selectedbrandList,start,end]);
   return (
     <Container fluid>
       <Row sm={1} md={2}>
-        <Options brands={brandList} setSelectedbrandList={setSelectedbrandList} SBL={selectedbrandList}/>
+        <Options brands={brandList} setSelectedbrandList={setSelectedbrandList} SBL={selectedbrandList}
+        setStart={setStart}  setEnd={setEnd} startPrice={start} endPrice={end}/>
         <ProductListView products={productLis} />
       </Row>
     </Container>
@@ -104,7 +110,7 @@ const Options = (props) => {
             <Tab.Content>
               <Tab.Pane eventKey="priceRange">
                 {/* <Sonnet /> */}
-                <PriceOpt />
+                <PriceOpt setEnd={props.setEnd} setStart={props.setStart} start={props.startPrice} end={props.endPrice} />
               </Tab.Pane>
               <Tab.Pane eventKey="brands">
                 <BrandOptions brands={props.brands} setbrandListtFun={props.setSelectedbrandList} SBL={props.SBL}/>
@@ -122,13 +128,21 @@ const Options = (props) => {
   );
 };
 
-const PriceOpt = () => (
+const PriceOpt = (props) => {
+  let SSP=(event)=>{
+    props.setStart(event.target.value);
+  }
+
+  let SSE=(event)=>{
+    props.setEnd(event.target.value);
+  }
+  return(
   <div className="d-flex flex-column justify-content-start ">
     <label htmlFor="start">Start</label>
-    <input id="start" type="number" className="outline-primary m-1 p-1" />
+    <input id="start" type="number" onChange={SSP} value={props.start}className="outline-primary m-1 p-1" />
     <br />
     <label htmlFor="start">End</label>
-    <input id="start" type="number" className="outline-primary m-1 p-1" />
+    <input id="start" type="number" onChange={SSE} value={props.end} className="outline-primary m-1 p-1" />
     <hr />
     <h4>Price range</h4>
     <div className="m-2">
@@ -162,7 +176,7 @@ const PriceOpt = () => (
       <label htmlFor="GT5000">5000+</label>
     </div>
   </div>
-);
+)};
 
 const checkBox=(eventKey,fun,sbl)=>{
 if(eventKey.target.checked){
