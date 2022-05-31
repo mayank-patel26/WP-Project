@@ -39,7 +39,7 @@ const productAll = async (fun,fun2,cate)=>{
 }
 
 const applyFilters=(fun,selectedlis,finalList)=>{
-  console.log(finalList.map((i)=>(i.title)));
+  console.log(finalList.map((i)=>(i.brand)));
   if(selectedlis.length===0){
     fun(finalList);
     return;
@@ -58,7 +58,14 @@ export default function Product(props) {
     
   }, []);
   useEffect(() => {
-    setbrandList(productLis.map(a => a.title))
+    let bList=[]
+    for(var i=0;i<productLis.length;i++){
+      if(bList.includes(productLis[i].brand)){
+        continue;
+      }
+      bList.push(productLis[i].brand);
+    }
+    setbrandList(bList)
     }, [fullproductList]);
   
     useEffect(() => {
