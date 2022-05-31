@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Container, Row, Col, Image } from "react-bootstrap";
 import Cart from "../api/cart";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 import { getAllProducts } from "../api/serverApi";
 
 const productAll = async (fun, ids) => {
@@ -42,6 +43,8 @@ export default function MyCart() {
 
       <h2 className="mt-5 text-center">Subtotal</h2>
       <h4>Rs. {totalPrice}</h4>
+
+      <Button as={Link} to="/success">Place order</Button>
     </Container>
     // <Container fluid>
     //   <div style={{ marginTop: "40px", marginBottom: "40px" }}></div>

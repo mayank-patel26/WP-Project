@@ -44,7 +44,7 @@ const applyFilters=(fun,selectedlis,finalList)=>{
     fun(finalList);
     return;
   }
-  fun(finalList.filter((i)=>(selectedlis.includes(i.title))));
+  fun(finalList.filter((i)=>(selectedlis.includes(i.brand))));
 }
 
 export default function Product(props) {

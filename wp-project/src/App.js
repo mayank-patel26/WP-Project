@@ -9,6 +9,7 @@ import Cart from './components/MyCart';
 import NewsLetter from './components/NewsLetter';
 import About from './components/About';
 import ProductItem from './components/ProductItem';
+import Success from './components/Success';
 
 function App() {
   const user = true;
@@ -32,6 +33,7 @@ function App() {
         <Route path='/newsletter' element={<NewsLetter/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/productItem' element={<ProductItem/>}/>
+        <Route path='/success' element={<Success/>}/>
       </Routes> 
     </div>
     </BrowserRouter>

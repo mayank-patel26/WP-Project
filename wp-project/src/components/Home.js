@@ -311,16 +311,16 @@ export default function Home(){
         <Row>
           {/* <p className="text-center">GET CONNECTED WITH US ON SOCIAL MEDIA</p> */}
           <div className="text-center" style={{ margin: "20px" }}>
-            <a href="" style={{ margin: "10px" }}>
+            <a href="www.facebook.com" style={{ margin: "10px" }}>
               <FaFacebook />
             </a>
-            <a href="" style={{ margin: "10px" }}>
+            <a href="www.twitter.com" style={{ margin: "10px" }}>
               <FaTwitter />
             </a>
-            <a href="" style={{ margin: "10px" }}>
+            <a href="www.linkedin.com" style={{ margin: "10px" }}>
               <FaLinkedin />
             </a>
-            <a href="" style={{ margin: "10px" }}>
+            <a href="www.youtube.com" style={{ margin: "10px" }}>
               <FaYoutube />
             </a>
           </div>
