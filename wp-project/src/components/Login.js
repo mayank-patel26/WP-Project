@@ -26,12 +26,13 @@ const login=async (id,pass)=>{
   try{
   let res=await axios({
     method: 'post',
-    url: 'http://localhost:5000/api/login',
+    url: 'http://localhost:5000/api/auth/login',
     data: {
       username : id,
       password : pass
     }
   });
+  console.log(res);
 }catch(e){
 
 }
