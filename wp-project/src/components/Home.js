@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
+import {Link} from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -78,6 +79,7 @@ export default function Home(){
         <Row xs={1} sm={2} md={4}>
           <Col xs={1} sm={1} md={2} lg={3} className=" flex-grow-1">
             <Card
+            as={Link} to="/products/tshirt"
               style={{ width: "18rem", height: "20rem", cursor: "pointer"}}
               className="m-2"
             >
