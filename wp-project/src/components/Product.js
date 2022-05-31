@@ -97,7 +97,7 @@ const Options = (props) => {
             <Tab.Content>
               <Tab.Pane eventKey="priceRange">
                 {/* <Sonnet /> */}
-                {/* <PriceOpt /> */}
+                <PriceOpt />
               </Tab.Pane>
               <Tab.Pane eventKey="brands">
                 <BrandOptions brands={props.brands} setbrandListtFun={props.setSelectedbrandList} SBL={props.SBL}/>
@@ -115,47 +115,47 @@ const Options = (props) => {
   );
 };
 
-// const PriceOpt = () => (
-//   <div className="d-flex flex-column justify-content-start ">
-//     <label htmlFor="start">Start</label>
-//     <input id="start" type="number" className="outline-primary m-1 p-1" />
-//     <br />
-//     <label htmlFor="start">End</label>
-//     <input id="start" type="number" className="outline-primary m-1 p-1" />
-//     <hr />
-//     <h4>Price range</h4>
-//     <div className="m-2">
-//       <input
-//         type="checkbox"
-//         id="LT1000"
-//         name="LT1000"
-//         value="LT1000"
-//         className="mx-3"
-//       />
-//       <label htmlFor="LT1000">upto 1000</label>
-//     </div>
-//     <div className="m-2">
-//       <input
-//         type="checkbox"
-//         id="LT5000"
-//         name="LT5000"
-//         value="LT5000"
-//         className="mx-3"
-//       />
-//       <label htmlFor="LT5000">1000-5000</label>
-//     </div>
-//     <div className="m-2">
-//       <input
-//         type="checkbox"
-//         id="GT5000"
-//         name="GT5000"
-//         value="GT5000"
-//         className="mx-3"
-//       />
-//       <label htmlFor="GT5000">5000+</label>
-//     </div>
-//   </div>
-// );
+const PriceOpt = () => (
+  <div className="d-flex flex-column justify-content-start ">
+    <label htmlFor="start">Start</label>
+    <input id="start" type="number" className="outline-primary m-1 p-1" />
+    <br />
+    <label htmlFor="start">End</label>
+    <input id="start" type="number" className="outline-primary m-1 p-1" />
+    <hr />
+    <h4>Price range</h4>
+    <div className="m-2">
+      <input
+        type="checkbox"
+        id="LT1000"
+        name="LT1000"
+        value="LT1000"
+        className="mx-3"
+      />
+      <label htmlFor="LT1000">upto 1000</label>
+    </div>
+    <div className="m-2">
+      <input
+        type="checkbox"
+        id="LT5000"
+        name="LT5000"
+        value="LT5000"
+        className="mx-3"
+      />
+      <label htmlFor="LT5000">1000-5000</label>
+    </div>
+    <div className="m-2">
+      <input
+        type="checkbox"
+        id="GT5000"
+        name="GT5000"
+        value="GT5000"
+        className="mx-3"
+      />
+      <label htmlFor="GT5000">5000+</label>
+    </div>
+  </div>
+);
 
 const checkBox=(eventKey,fun,sbl)=>{
 if(eventKey.target.checked){

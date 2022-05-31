@@ -34,6 +34,8 @@ export default function MyCart() {
   console.log(list);
   return (
     <Container>
+      <col style={{display: "flex", justifyContent: "center", margin: "20px"}}></col>
+      <h1>Cart</h1>
       {ItemList.map((item, key) => (
         <CartItem item={item} key={key} />
       ))}
