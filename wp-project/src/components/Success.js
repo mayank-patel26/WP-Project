@@ -10,4 +10,5 @@ export default function Success() {
       </Col>
     </div>
   );
+  
 }

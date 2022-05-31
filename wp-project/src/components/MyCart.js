@@ -170,10 +170,11 @@ const CartItem = (props) => {
   let tempPrice = 0;
 
   return (
-    <div>
-      <div style={{ width: "300px" }}>
-        <Row>
+      <Container className="d-flex flex-column justify-content-center" style={{ width: "300px" }} >
+        <Row fluid className="d-flex justify-content-center" style={{ width: "300px" }} >
+          <Col className="d-flex justify-content-center">
           <Image src={Item.img} width={300} height={300} className="m-3" />
+          </Col>
         </Row>
         <Row>
           <Col className="d-flex flex-column p-3">
@@ -182,7 +183,6 @@ const CartItem = (props) => {
            
           </Col>
         </Row>
-      </div>
-    </div>
+      </Container>
   );
 };
