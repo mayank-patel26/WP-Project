@@ -3,7 +3,7 @@ import React from "react";
 import { Carousel, Button, Card, Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 
 export default function Home(){
   // productAll();
