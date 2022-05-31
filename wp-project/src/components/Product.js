@@ -16,16 +16,21 @@ const b = ["Boat", "JBL", "Skull Candy", "Leaf", "Noise"];
 //   {name :"Bluetooth earphones",icon : 'https://rukminim1.flixcart.com/image/416/416/k6l2vm80/headphone/v/v/z/yora-bluetooth-headset-with-mic-and-volume-button-earphone-original-imaf7p2fqnaspqnt.jpeg?q=70' ,price :'50$',description :"red bluetooth earphones"},
 // ];
 
-const productAll = async (fun,fun2)=>{
+const productAll = async (fun,fun2,cate)=>{
   let url = getAllProducts();
   try{
 
     let data = await axios.get(url);
-    fun(data['data']['products']);
-    fun2(data['data']['products']);
+    let finalData=data['data']['products'];
+    if(cate!=='default'){
+      console.log(finalData.filter((i)=>(i.categories.includes(cate))));
+      finalData=finalData.filter((i)=>(i.categories.includes(cate)));
+    }
+    fun(finalData);
+    fun2(finalData);
     
     // productList=data['data']['products'];
-    console.log(data['data']['products']);
+    console.log(finalData);
   }catch(e){
     console.log(e);
   }
@@ -42,14 +47,14 @@ const applyFilters=(fun,selectedlis,finalList)=>{
   fun(finalList.filter((i)=>(selectedlis.includes(i.title))));
 }
 
-export default function Product() {
+export default function Product(props) {
   const [selectedbrandList, setSelectedbrandList] = useState([]);
   const [productLis, setproductLis] = useState([]);
   const [fullproductList, setproductList] = useState([]);
   const [brandList, setbrandList] = useState([]);
   useEffect(() => {
    
-  productAll(setproductLis,setproductList);
+  productAll(setproductLis,setproductList,props.category);
     
   }, []);
   useEffect(() => {
