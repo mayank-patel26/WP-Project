@@ -1,2 +1,2 @@
 # WP-Project
-College Mini Project
+Shopping Website built using React.js and Node.js.
